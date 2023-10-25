@@ -1,0 +1,197 @@
+body{
+    background-color: aliceblue;
+    margin: 0px;
+    padding: 0px
+}
+.Ribbon{
+    background-color: deepskyblue;
+    display: block;
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+h1{
+    display: inline;
+}
+#deco{
+    display: inline;
+    float: right;
+}
+.navMenu{
+    display: inline;
+    
+}
+.navUl{
+    display: inline;
+}
+h2.tab{
+    margin: 0px;
+    padding: 0px;
+}
+div.ribbonRech{
+    display: inline;
+    float: right;
+}
+.formContainer{
+    border: solid 1px gray;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+h2.formContainerTitle{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.navUl{
+    margin: 0px;
+    padding: 0px;
+}
+.navLi{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.navLi-selected{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: aliceblue
+}
+li.navLi:hover {
+    background-color: aqua;
+}
+#badLog{
+    color: red;
+    display: none;
+}
+.imageLogin{
+    position: relative;
+    opacity: 0.3;
+    top: 0px;
+}
+form.forms-login, form.forms-profils, form.forms-evt{
+    display: table;
+    align-content: center;
+    margin: 20px;
+}
+div.forms-login, div.forms-profils, div.forms-evt{
+    display: table-row;
+    margin: 0px;
+    padding: 0px;
+}
+label.forms-login,input.forms-login,
+label.forms-profils,input.forms-profils,
+label.forms-evt,input.forms-evt, textarea.form-evt{
+    display: table-cell;
+    margin: 10px;
+    text-align: left;
+}
+#instruments, #tessiture{
+    display: none;
+    transition: 1s all;
+}
+.grillePlanning {
+    display: table;
+    text-align: center;
+}
+.grillePlanningRow {
+    display: table-row;
+}
+.grillePlanningCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.day{
+    text-align: center;
+    margin: 5px;
+}
+input.monthYear {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+div.monthYear {
+    display: inline-block;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+h2.monthYear {
+    text-align: center;
+}
+.cardDayOn{
+    border: solid 1px gray;
+    border-radius: 5px;
+    height: 11vw;
+    width: 11vw;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+.cardDayOff{
+    border: solid 1px gray;
+    border-radius: 5px;
+    height: 11vw;
+    width: 11vw;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+}
+.cardEvt{
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+.plan1{
+    z-index: 1;
+    position: absolute;
+    background-color: aliceblue;
+    height: 100vw;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+.plan2{
+    z-index: 2;
+    position: absolute;
+    background-color: lightgray;
+    opacity: 0.5;
+    height: 100vw;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+.showEvt{
+    z-index: 3;
+    position: absolute;
+    border: solid 1px gray;
+    border-radius: 5px;
+    background-color: aliceblue;
+    opacity: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    min-height: 50%;
+    min-width: 50%;
+    padding: 20px;
+    //text-align: center;
+    display: none;
+}
+.closeButton{
+    float: right;
+    background-color: orangered;
+    border: solid 1px gray;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+table.listParticip, td.listParticip, th.listParticip{
+    border: 1px solid gray;
+}
+footer{
+    background-color: deepskyblue;
+    min-height: 200px;
+    padding: 20px
+}

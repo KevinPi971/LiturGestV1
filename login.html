@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8">
+        <title>LiturGest</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class="Ribbon">
+            <h1 class="titleApp">LiturGest</h1>
+            <h2>Gestionnaire d'équipe de liturgie</h2>
+            <br>
+        </div>
+        <div >
+            <form action="/index.html" class="forms-login" id="formLogin">
+                <div class="forms-login">
+                    <label for="mail" class="forms-login">Mail : </label>
+                    <input id="mail" class="forms-login" type="email" required><br>
+                </div>
+                <div class="forms-login">
+                    <label for="mdp" class="forms-login">Mot de passe : </label>
+                    <input id="mdp" class="forms-login" type="password" required><br>
+                </div>
+                <div class="forms-login">
+                    <input type="submit" class="forms-login" value="Connexion">
+                </div>
+            </form>
+            <div class="forms-login">
+                <label class="forms-login" id="badLog">Mail ou mot de passe inconnu</label>
+            </div>
+        </div>
+        <footer>
+            <div>
+                Footer<br>
+                <input type="button" onclick="init()" value="réinitialisation">
+            </div>
+        </footer>
+        <!--img src="/img/image_login.jpg" class="imageLogin"-->
+        <script src="/js/db.js"></script>
+        <script src="/js/fonctions.js"></script>
+        <script src="/js/liturgest-login.js"></script>
+<!--        <script src="/js/testdb.js"></script>-->
+    </body>
+    <style>
+        
+    </style>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8">
+        <title>LiturGest</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class="Ribbon">
+            <div>
+                <h1>LiturGest</h1>
+                <div id="deco">
+                    <a id="linkDeco" href="javascript:logout()">Déconnexion</a>
+                </div>
+            </div>
+            <nav class="navMenu">
+                <ul class="navUl">
+                    <a href="index.html">
+                        <li class="navLi">
+                            Accueil
+                        </li>
+                    </a>
+                    <a href="planning.html">
+                        <li class="navLi">
+                            Mon Planning
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="navLi-selected">
+                            <h2 class="tab">Profil</h2>
+                        </li>
+                    </a>
+                </ul>
+                
+            </nav>
+            <div class="ribbonRech">
+                <input class="ribbonRech" id="recherche" type="text">
+                <input class="ribbonRech" type="submit" value="Rechercher">
+            </div>
+        </div>
+        <div>
+            <div class="formContainer">
+                <h2 class="formContainerTitle">Contact</h2>
+                
+                <div class="forms-profils">
+                    <label for="profil1" class="forms-profils" id="labelProfil1">Administrateur : </label>
+                    <input name="profil" class="forms-profils" type="radio" id="profil1" value="profil1" disabled="true">
+                    <label for="profil2" class="forms-profils">Responsable liturgique : </label>
+                    <input name="profil" class="forms-profils" type="radio" id="profil2" value="profil2" disabled="true">
+                    <label for="profil3" class="forms-profils">Membre : </label>
+                    <input name="profil" class="forms-profils" type="radio" id="profil3" value="profil3" disabled="true">
+                    <label for="profil4" class="forms-profils">Parent : </label>
+                    <input name="profil" class="forms-profils" type="radio" id="profil4" value="profil4" disabled="true">
+                    <label for="profil5" class="forms-profils">Intervenant : </label>
+                    <input name="profil" class="forms-profils" type="radio" id="profil5" value="profil5" disabled="true">
+                </div>
+                <form class="forms-profils" id="formContact">
+                    <div class="forms-profils">
+                        <label for="nom" class="forms-profils">NOM : </label>
+                        <input id="nom" class="forms-profils" type="text" required maxlength="40" disabled="true" >
+                    </div>
+                    <div class="forms-profils">
+                        <label for="prenom" class="forms-profils">Prénom : </label>
+                        <input id="prenom" class="forms-profils" type="text" required maxlength="25" disabled="true" >
+                    </div>
+                    <div class="forms-profils">
+                        <label for="dnais" class="forms-profils">Date de naissance : </label>
+                        <input id="dnais" class="forms-profils" type="date" required disabled="true">
+                    </div>
+                    <div class="forms-profils">
+                        <label for="tel" class="forms-profils">Tel : </label>
+                        <input id="tel" class="forms-profils" type="tel" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="06 XX XX XX XX" disabled="true">
+                    </div>
+                    <div class="forms-profils">
+                        <label for="whatsapp" class="forms-profils">WhatsApp ?</label>
+                        <input id="whatsapp" class="forms-profils" type="checkbox" disabled="true">
+                    </div>
+                    <div class="forms-profils">
+                        <label for="mail" class="forms-profils">Email : </label>
+                        <input id="mail" class="forms-profils" type="email" required maxlength="50" disabled="true">
+                    </div>
+                    <div class="forms-profils">
+                        <label for="mdp" class="forms-profils">Mot de passe</label>
+                        <input id="mdp" class="forms-profils" type="password" required maxlength="16" disabled="true">
+                    </div>
+                    <div class="forms-profils">
+                        <label for="mdp2" class="forms-profils">Confirmation mot de passe</label>
+                        <input id="mdp2" class="forms-profils" type="password" required maxlength="16" disabled="true">
+                    <div class="forms-profils">
+                        <input type="submit" id="okContact" value="Modifier">
+                    </div>
+                    </div>
+                </form>
+            </div>
+            <div class="formContainer">
+                <h2 class="formContainerTitle">Fonctions</h2>
+                <form action="" method="get" class="forms-profils"  id="formFonction">
+<!--
+                    <div class="forms-profils">
+                        <label for="chantre" class="forms-profils">Chantre</label>
+                        <input id="chantre" class="forms-profils" type="checkbox">
+                    </div>
+-->
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div>Footer</div>
+        </footer>
+        <script src="/js/db.js"></script>
+        <script src="/js/fonctions.js"></script>
+        <script src="/js/liturgest-profil.js"></script>
+    </body>
+    <style>
+        
+    </style>
+</html>

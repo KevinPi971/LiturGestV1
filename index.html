@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8">
+        <title>LiturGest</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class="Ribbon">
+            <div>
+                <h1>LiturGest</h1>
+                <div id="deco">
+                    <a id="linkDeco" href="javascript:logout()">Déconnexion</a>
+                </div>
+            </div>
+            <nav class="navMenu">
+                <ul class="navUl">
+                    <a href="#">
+                        <li class="navLi-selected">
+                            <h2 class="tab">Accueil</h2>
+                        </li>
+                    </a>
+                    <a href="/planning.html">
+                        <li class="navLi">
+                            Planning
+                        </li>
+                    </a>
+                    <a href="/profil.html">
+                        <li class="navLi">
+                            Profil
+                        </li>
+                    </a>
+                </ul>
+                
+            </nav>
+            <div class="ribbonRech">
+                <input class="ribbonRech" id="recherche" type="text">
+                <input class="ribbonRech" type="submit" value="Rechercher">
+            </div>
+        </div>
+        <div>
+            <div class="formContainer">
+                <h2 class="formContainerTitle">Cards</h2>
+            </div>
+        </div>
+        <footer>
+            <div>Footer</div>
+        </footer>
+        <script src="/js/db.js"></script>
+        <script src="/js/fonctions.js"></script>
+        <script src="/js/liturgest-index.js"></script>
+    </body>
+    <style>
+        
+    </style>
+</html>

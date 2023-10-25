@@ -1,0 +1,1 @@
+if(!sessionStorage.userCo)window.location.replace("/login.html");

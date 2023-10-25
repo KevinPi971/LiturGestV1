@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8">
+        <title>LiturGest</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class="showEvt" id="showEvt">
+            <button class="closeButton" onclick="showElt('showEvt', false);">X</button>
+            <h2 class="formContainerTitle" id="titleEvt"></h2>
+            <form class="forms-evt" id="formEvt">
+                <div class="forms-evt">
+                    <label for="typeevt" class="forms-evt">Type d'évènement : </label>
+                    <select id="typeevt" class="forms-evt" required></select>
+                </div>
+                <div class="forms-evt">
+                    <label for="ddeb" class="forms-evt">Date de début : </label>
+                    <input id="ddeb" class="forms-evt" type="date" required/>
+                </div>
+                <div class="forms-evt">
+                    <label for="hdeb" class="forms-evt">Heure de début : </label>
+                    <input id="hdeb" class="forms-evt" type="time" required/>
+                </div>
+                <div class="forms-evt">
+                    <label for="dfin" class="forms-evt">Date de fin : </label>
+                    <input id="dfin" class="forms-evt" type="date" required/>
+                </div>
+                <div class="forms-evt">
+                    <label for="hfin" class="forms-evt">Heure de fin : </label>
+                    <input id="hfin" class="forms-evt" type="time" required/>
+                </div>
+                <div class="forms-evt">
+                    <label for="lieu" class="forms-evt">Lieu : </label>
+                    <select id="lieu" class="forms-evt" required></select>
+                </div>
+                <div class="forms-evt">
+                    <label for="adresse" class="forms-evt">Adresse : </label>
+                    <textarea id="adresse" class="forms-evt" type="text" size="50" rows="3" cols="20" disabled></textarea>
+                </div>
+                <div class="forms-evt">
+                    <label for="listParticip" class="forms-evt">Liste des participants : </label>
+                    <div class="selectParticip">
+                        <table id="listParticip" class="listParticip"></table>
+                    </div>
+                </div>
+                <input type="submit" id="saveEvt" value="Enregistrer" disabled>
+                <input type="submit" id="deleteEvt" value="Supprimer">
+            </form>
+        </div>
+        <div class="plan2" id="mask">
+        </div>
+        <div class="plan1">
+            <div class="Ribbon">
+                <div>
+                    <h1>LiturGest</h1>
+                    <div id="deco">
+                        <a id="linkDeco" href="javascript:logout()" >Déconnexion</a>
+                    </div>
+                </div>
+                <nav class="navMenu">
+                    <ul class="navUl">
+                        <a href="index.html">
+                            <li class="navLi">
+                                Accueil
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="navLi-selected">
+                                <h2 class="tab">Mon Planning</h2>
+                            </li>
+                        </a>
+                        <a href="profil.html">
+                            <li class="navLi">
+                                Profil
+                            </li>
+                        </a>
+                    </ul>
+                    
+                </nav>
+                <div class="ribbonRech">
+                    <input class="ribbonRech" id="recherche" type="text">
+                    <input class="ribbonRech" type="submit" value="Rechercher">
+                </div>
+            </div>
+            <div>
+                <div class="formContainer" style="border: none">
+                    <h2 class="monthYear">
+                        <input class="monthYear" type="button" value="<<" onclick="changeMonthOrYear('prevMonth')">
+                        <div class="monthYear" id="mois"></div>
+                        <input class="monthYear" type="button" value=">>" onclick="changeMonthOrYear('nextMonth')">
+                        <input class="monthYear" type="button" value="<<" onclick="changeMonthOrYear('prevYear')">
+                        <div class="monthYear" id="annee"></div>
+                        <input class="monthYear" type="button" value=">>" onclick="changeMonthOrYear('nextYear')">
+                    </h2>
+                    <div class="grillePlanning">
+                        <div class="grillePlanningRow">
+                            <div class="grillePlanningCell">
+                                <div class="day"></div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Dimanche</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Lundi</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Mardi</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Mercredi</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Jeudi</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Vendredi</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="day">Samedi</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°1</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card0">Card0</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card1">Card1</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card2">Card2</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card3">Card3</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card4">Card4</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card5">Card5</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card6">Card6</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°2</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card7">Card7</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card8">Card8</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card9">Card9</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card10">Card10</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card11">Card11</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card12">Card12</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card13">Card13</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°3</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card14">Card14</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card15">Card15</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card16">Card16</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card17">Card17</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card18">Card18</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card19">Card19</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card20">Card20</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°4</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card21">Card21</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card22">Card22</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card23">Card23</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card24">Card24</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card25">Card25</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card26">Card26</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card27">Card27</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow" id="week5">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°5</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card28">Card28</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card29">Card29</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card30">Card30</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card31">Card31</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card32">Card32</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card33">Card33</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card34">Card34</div>
+                            </div>
+                        </div>
+                        <div class="grillePlanningRow" id="week6">
+                            <div class="grillePlanningCell">
+                                <div class="day">Semaine n°6</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card35">Card35</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card36">Card36</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card37">Card37</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card38">Card38</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card39">Card39</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card40">Card40</div>
+                            </div>
+                            <div class="grillePlanningCell">
+                                <div class="cardDayOff" id="card41">Card41</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div>Footer</div>
+            </footer>
+        </div>
+        <script src="/js/db.js"></script>
+        <script src="/js/fonctions.js"></script>
+        <script src="/js/liturgest-planning.js"></script>
+    </body>
+    <style>
+        
+    </style>
+</html>
