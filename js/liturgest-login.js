@@ -18,7 +18,7 @@ async function isLoginOk(){
         return l.length == 1 ? l[0] : null;
     });
     if(user == null)isOk = false;
-    if(eltMDP.value != user.mdp)isOk = false;
+    if(isOk && eltMDP.value != user.mdp)isOk = false;
     if(isOk){
         sessionStorage.userCo = JSON.stringify(user);
         eltForm.submit();
